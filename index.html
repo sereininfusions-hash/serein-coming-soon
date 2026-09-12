@@ -88,18 +88,28 @@
         outline: 2px solid #ded0aa !important;
         outline-offset: 3px;
       }
+      /* Override MailerLite's own text alignment for the intro and success copy. */
+      #serein-signup.serein-signup .ml-embedded .ml-form-embedWrapper :is(.ml-form-embedContent, .ml-form-successContent),
+      #serein-signup.serein-signup .ml-embedded .ml-form-embedWrapper :is(.ml-form-embedContent, .ml-form-successContent) :is(h1, h2, h3, h4, p) {
+        text-align: center !important;
+      }
+      #serein-signup.serein-signup .ml-embedded input:is([type="email"], [type="text"]) {
+        text-align: left !important;
+      }
       @media (max-width: 600px) {
         .serein-signup { margin-top: 32px; margin-bottom: 24px; }
       }
     </style>
 
-    <!-- MAILERLITE UNIVERSAL SCRIPT PLACEHOLDER
-      Paste the COMPLETE, EXACT MailerLite Universal script from your account
-      here, before the closing head tag. Include its account-specific ml('account', ...)
-      line. The account ID was redacted in the supplied screenshot, so no script
-      or account ID has been guessed. The form below will load only after you
-      paste that script. Add the Universal script once only.
-    -->
+    <!-- MailerLite Universal -->
+    <script>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '2630861');
+    </script>
+    <!-- End MailerLite Universal -->
   </head>
   <body>
     <div class="page-shell">
@@ -128,7 +138,7 @@
           </p>
 
           <!-- MailerLite signup, immediately after the brand line. -->
-          <section class="serein-signup" aria-label="Join the SEREIN mailing list">
+          <section id="serein-signup" class="serein-signup" aria-label="Join the SEREIN mailing list">
             <div class="ml-embedded" data-form="CUm4A3"></div>
           </section>
         </div>
