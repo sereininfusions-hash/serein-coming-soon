@@ -171,6 +171,84 @@ h1 .italic {
   letter-spacing: 0.015em;
 }
 
+.catalogue-panel {
+  width: min(100%, 43rem);
+  margin: clamp(2.4rem, 5vh, 3.8rem) auto 0;
+  padding: clamp(2rem, 4vw, 3rem) clamp(0.25rem, 2vw, 1.5rem) 0;
+  border-top: 1px solid var(--line);
+}
+
+.catalogue-kicker {
+  margin: 0 0 0.8rem;
+  color: var(--gold);
+  font-size: 0.61rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.catalogue-panel h2 {
+  margin: 0;
+  color: var(--ivory);
+  font-family: "Italiana", serif;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: -0.015em;
+}
+
+.catalogue-copy {
+  max-width: 34rem;
+  margin: 1rem auto 0;
+  color: var(--ivory-muted);
+  font-size: clamp(0.82rem, 1.1vw, 0.93rem);
+  line-height: 1.7;
+}
+
+.catalogue-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+}
+
+.catalogue-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.82rem 1.25rem;
+  border: 1px solid rgba(159, 134, 88, 0.58);
+  color: var(--ivory);
+  background: rgba(159, 134, 88, 0.05);
+  font-size: 0.61rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 220ms ease, border-color 220ms ease, color 220ms ease, transform 220ms ease;
+}
+
+.catalogue-button--primary {
+  border-color: #b29a66;
+  color: var(--ink);
+  background: #b29a66;
+}
+
+.catalogue-button:hover,
+.catalogue-button:focus-visible {
+  border-color: #d8c493;
+  color: var(--ink);
+  background: #d8c493;
+  transform: translateY(-1px);
+}
+
+.catalogue-button:focus-visible {
+  outline: 2px solid #ded0aa;
+  outline-offset: 3px;
+}
+
 .scroll-note {
   position: absolute;
   right: -1.5rem;
@@ -276,6 +354,33 @@ h1 .italic {
 
   .brand-line {
     max-width: 19rem;
+  }
+
+  .catalogue-panel {
+    width: 100%;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .catalogue-panel h2 {
+    max-width: 20rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .catalogue-copy {
+    max-width: 19rem;
+  }
+
+  .catalogue-actions {
+    flex-direction: column;
+    width: min(100%, 20rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .catalogue-button {
+    width: 100%;
   }
 
   .scroll-note {
